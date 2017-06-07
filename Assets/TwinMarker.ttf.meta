@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: d2c356662fe949c44baab7e00a3f8023
+timeCreated: 1496865564
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Twin Marker
+  fontNames:
+  - Twin Marker
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
