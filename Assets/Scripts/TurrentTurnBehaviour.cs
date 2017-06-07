@@ -17,7 +17,7 @@ public class TurrentTurnBehaviour : MonoBehaviour
         var prevY = prevRot.y;
 
         var LookAtPoint = new Vector3(target.transform.position.x, transform.position.y, target.transform.position.z);
-        // make look at target and storee new z
+        // make look at target and store new z
         transform.LookAt(LookAtPoint);
         var newZ = transform.rotation.z;
 

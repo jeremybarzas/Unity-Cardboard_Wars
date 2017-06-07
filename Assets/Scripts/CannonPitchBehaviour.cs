@@ -6,7 +6,7 @@ public class CannonPitchBehaviour : MonoBehaviour
 
     private void Update()
     {
-        transform.LookAt(target.transform);
+        PitchCannon(target);
     }
 
     void PitchCannon(GameObject target)
@@ -17,14 +17,13 @@ public class CannonPitchBehaviour : MonoBehaviour
         var prevY = prevRot.y;
 
         var LookAtPoint = new Vector3(target.transform.position.x, transform.position.y, target.transform.position.z);
-        // make look at target and storee new z
+        // make look at target and store new z
         transform.LookAt(LookAtPoint);
-        var newZ = transform.rotation.z;
+        var newX = transform.rotation.x;
 
         // set new rotations x and y to the previous x and y to keep them "locked"
-        Vector3 newRot = new Vector3(prevX, 0, prevX);
+        Vector3 newRot = new Vector3(newX, 0, 0);
         transform.Rotate(newRot);
-
     }
 
     void OnDrawGizmos()
