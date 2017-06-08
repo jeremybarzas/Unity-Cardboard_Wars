@@ -20,7 +20,7 @@ public class CannonPitchBehaviour : MonoBehaviour
         //targetRotation.z = transform.rotation.z;
 
         // set rotation of the object 
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 5 * Time.deltaTime);        
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 2 * Time.deltaTime);        
     }
 
     void OnDrawGizmos()
