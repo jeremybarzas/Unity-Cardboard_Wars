@@ -3,7 +3,7 @@
 public class TurrentTurnBehaviour : MonoBehaviour
 {
     public GameObject target;
-    
+
     private void Update()
     {
         TraverseTurret(target);
@@ -11,13 +11,15 @@ public class TurrentTurnBehaviour : MonoBehaviour
 
     void TraverseTurret(GameObject target)
     {
-        // store old rotation
-        var prevRot = transform.rotation;
-        var prevY = prevRot.y;
+        // store new rotation with Quaternion.LookRotation Method.
+        var targetRotation = Quaternion.LookRotation(target.transform.position - transform.position);
 
-        var LookAtPoint = new Vector3(target.transform.position.x, transform.position.y, target.transform.position.z);
-        // make look at target and store new z
-        transform.LookAt(LookAtPoint);
+        // lock turret x and z axis in place
+        targetRotation.x = transform.rotation.x;
+        targetRotation.z = transform.rotation.z;
+
+        // set rotation of the object
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 2 * Time.deltaTime);
     }
 
     void OnDrawGizmos()
