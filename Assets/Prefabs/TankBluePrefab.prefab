@@ -83,7 +83,7 @@ GameObject:
   - component: {fileID: 4690759938330016}
   - component: {fileID: 95515722509372466}
   m_Layer: 0
-  m_Name: TankMesh
+  m_Name: TankBluePrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
