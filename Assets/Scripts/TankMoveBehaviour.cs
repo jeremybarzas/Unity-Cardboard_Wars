@@ -2,12 +2,13 @@
 
 public class TankMoveBehaviour : MonoBehaviour
 {
+    public float speed = 10f;
+
     private void CharacterMove()
     {
-        var speed = 15.0f;
-        var x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
+        var y = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
         var z = Input.GetAxis("Vertical") * Time.deltaTime * speed;
-        transform.Rotate(0, x, 0);
+        transform.Rotate(0, y, 0);
         transform.Translate(0, 0, z);
     }
 
