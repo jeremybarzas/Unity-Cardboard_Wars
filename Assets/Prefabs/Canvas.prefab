@@ -222,7 +222,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 67e87411a170a0044acc1cde08050f2b, type: 3}
+    m_Font: {fileID: 12800000, guid: d2c356662fe949c44baab7e00a3f8023, type: 3}
     m_FontSize: 48
     m_FontStyle: 1
     m_BestFit: 0
@@ -254,7 +254,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 93405a51721f4e243bd344d9ba6405c6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 50ea2ea8553886d45bcfb120a7949c13, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -288,10 +288,10 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300004, guid: 93405a51721f4e243bd344d9ba6405c6,
+    m_HighlightedSprite: {fileID: 21300002, guid: 50ea2ea8553886d45bcfb120a7949c13,
       type: 3}
-    m_PressedSprite: {fileID: 21300002, guid: 93405a51721f4e243bd344d9ba6405c6, type: 3}
-    m_DisabledSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 21300004, guid: 50ea2ea8553886d45bcfb120a7949c13, type: 3}
+    m_DisabledSprite: {fileID: 21300006, guid: 50ea2ea8553886d45bcfb120a7949c13, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -323,7 +323,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 93405a51721f4e243bd344d9ba6405c6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 50ea2ea8553886d45bcfb120a7949c13, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -357,10 +357,10 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300004, guid: 93405a51721f4e243bd344d9ba6405c6,
+    m_HighlightedSprite: {fileID: 21300002, guid: 50ea2ea8553886d45bcfb120a7949c13,
       type: 3}
-    m_PressedSprite: {fileID: 21300002, guid: 93405a51721f4e243bd344d9ba6405c6, type: 3}
-    m_DisabledSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 21300004, guid: 50ea2ea8553886d45bcfb120a7949c13, type: 3}
+    m_DisabledSprite: {fileID: 21300006, guid: 50ea2ea8553886d45bcfb120a7949c13, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -399,10 +399,10 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300004, guid: 93405a51721f4e243bd344d9ba6405c6,
+    m_HighlightedSprite: {fileID: 21300002, guid: 50ea2ea8553886d45bcfb120a7949c13,
       type: 3}
-    m_PressedSprite: {fileID: 21300002, guid: 93405a51721f4e243bd344d9ba6405c6, type: 3}
-    m_DisabledSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 21300004, guid: 50ea2ea8553886d45bcfb120a7949c13, type: 3}
+    m_DisabledSprite: {fileID: 21300006, guid: 50ea2ea8553886d45bcfb120a7949c13, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -435,7 +435,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 67e87411a170a0044acc1cde08050f2b, type: 3}
+    m_Font: {fileID: 12800000, guid: d2c356662fe949c44baab7e00a3f8023, type: 3}
     m_FontSize: 48
     m_FontStyle: 1
     m_BestFit: 0
@@ -489,7 +489,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 67e87411a170a0044acc1cde08050f2b, type: 3}
+    m_Font: {fileID: 12800000, guid: d2c356662fe949c44baab7e00a3f8023, type: 3}
     m_FontSize: 48
     m_FontStyle: 1
     m_BestFit: 0
@@ -521,7 +521,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 93405a51721f4e243bd344d9ba6405c6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 50ea2ea8553886d45bcfb120a7949c13, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -555,10 +555,10 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300004, guid: 93405a51721f4e243bd344d9ba6405c6,
+    m_HighlightedSprite: {fileID: 21300002, guid: 50ea2ea8553886d45bcfb120a7949c13,
       type: 3}
-    m_PressedSprite: {fileID: 21300002, guid: 93405a51721f4e243bd344d9ba6405c6, type: 3}
-    m_DisabledSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 21300004, guid: 50ea2ea8553886d45bcfb120a7949c13, type: 3}
+    m_DisabledSprite: {fileID: 21300006, guid: 50ea2ea8553886d45bcfb120a7949c13, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -617,7 +617,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 67e87411a170a0044acc1cde08050f2b, type: 3}
+    m_Font: {fileID: 12800000, guid: d2c356662fe949c44baab7e00a3f8023, type: 3}
     m_FontSize: 48
     m_FontStyle: 1
     m_BestFit: 0
@@ -649,7 +649,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 93405a51721f4e243bd344d9ba6405c6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 50ea2ea8553886d45bcfb120a7949c13, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
