@@ -3,7 +3,7 @@
 public class TurrentTurnBehaviour : MonoBehaviour
 {
     public GameObject target;
-    
+
     private void Update()
     {
         TraverseTurret(target);
@@ -19,7 +19,7 @@ public class TurrentTurnBehaviour : MonoBehaviour
         targetRotation.z = transform.rotation.z;
 
         // set rotation of the object
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 3 * Time.deltaTime);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 5 * Time.deltaTime);
     }
 
     void OnDrawGizmos()

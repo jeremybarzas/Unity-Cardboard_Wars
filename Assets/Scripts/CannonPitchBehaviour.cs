@@ -15,12 +15,12 @@ public class CannonPitchBehaviour : MonoBehaviour
         var targetPositon = target.transform.position;
         var targetRotation = Quaternion.LookRotation(targetPositon - transform.position);
         
-        // lock cannon y rotation
+        // lock cannon y and z axis in place
         //targetRotation.y = transform.rotation.y;
         //targetRotation.z = transform.rotation.z;
 
         // set rotation of the object 
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 3 * Time.deltaTime);        
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 5 * Time.deltaTime);        
     }
 
     void OnDrawGizmos()
