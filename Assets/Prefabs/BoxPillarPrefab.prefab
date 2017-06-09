@@ -23,12 +23,12 @@ GameObject:
   - component: {fileID: 23818160307915738}
   - component: {fileID: 65295296383044626}
   m_Layer: 0
-  m_Name: Box PillarPrefab
+  m_Name: BoxPillarPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4750332284842060
 Transform:
   m_ObjectHideFlags: 1

@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23169221363574264}
   - component: {fileID: 65250644450801246}
   m_Layer: 0
-  m_Name: Crayon BoxPrefab
+  m_Name: CrayonBoxPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
