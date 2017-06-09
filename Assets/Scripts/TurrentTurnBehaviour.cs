@@ -15,11 +15,11 @@ public class TurrentTurnBehaviour : MonoBehaviour
         var targetRotation = Quaternion.LookRotation(target.transform.position - transform.position);
 
         // lock turret x and z axis in place
-        targetRotation.x = transform.rotation.x;
-        targetRotation.z = transform.rotation.z;
+        targetRotation.x = transform.localRotation.x;
+        targetRotation.z = transform.localRotation.z;
 
         // set rotation of the object
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 2 * Time.deltaTime);
+        transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotation, 4 * Time.deltaTime);
     }
 
     void OnDrawGizmos()
