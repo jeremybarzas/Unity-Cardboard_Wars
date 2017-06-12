@@ -19,7 +19,7 @@ public class TurrentTurnBehaviour : MonoBehaviour
         targetRotation.z = transform.localRotation.z;
 
         // set rotation of the object
-        transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotation, 4 * Time.deltaTime);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 4 * Time.deltaTime);
     }
 
     void OnDrawGizmos()
