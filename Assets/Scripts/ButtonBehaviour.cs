@@ -1,26 +1,39 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ButtonBehaviour : MonoBehaviour
 {
-    public void SingleplayerButton()
+    public Canvas mainMenu;
+    public Canvas controlsScreen;
+
+    public void onSinglePlayerClicked(string value)
     {
-        Application.LoadLevel("5.jeremytest");
+        GameState.Instance.LoadScene(value);
+    }
+  
+    public void onMultiplayerClicked(string value)
+    {
+        GameState.Instance.LoadScene(value);
     }
 
-    public void MultiplayerButton()
+    public void onControlsClicked()
     {
-        Application.LoadLevel("5.jeremytest");
+        mainMenu.enabled = false;
+        controlsScreen.enabled = true;
+    }
+    public void onExitToDesktopClicked()
+    {
+        GameState.Instance.QuitGame();
     }
 
-    public void ControlsButton()
+    public void onBackClicked()
     {
-        Application.LoadLevel("1.reservedscene");
+        controlsScreen.enabled = false;
+        mainMenu.enabled = true;
     }
 
-    public void ExitToDesktopButton()
+    void Start()
     {
-        Application.Quit();
+        mainMenu.enabled = true;
+        controlsScreen.enabled = false;
     }
 }

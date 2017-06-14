@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: dee0ec64217d04c4292371105b4f8a0f
-timeCreated: 1496956658
+timeCreated: 1497478179
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -15,6 +15,10 @@ TextureImporter:
     21300016: healthbar_20%
     21300018: healthbar_10%
     21300020: healthbar_DEAD
+    21300022: back_normal
+    21300024: back_highlighted
+    21300026: back_pressed
+    21300028: back_disabled
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -220,6 +224,58 @@ TextureImporter:
         height: 180
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: back_normal
+      rect:
+        serializedVersion: 2
+        x: 1550
+        y: 557
+        width: 180
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: back_highlighted
+      rect:
+        serializedVersion: 2
+        x: 1557
+        y: 353
+        width: 180
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: back_pressed
+      rect:
+        serializedVersion: 2
+        x: 1766
+        y: 557
+        width: 180
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: back_disabled
+      rect:
+        serializedVersion: 2
+        x: 1767
+        y: 355
+        width: 180
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
