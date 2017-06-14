@@ -267,6 +267,11 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114501019005526362, guid: 5c9c90a70bd70574ebd4bc5e92473897,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1972567662}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5c9c90a70bd70574ebd4bc5e92473897, type: 2}
   m_IsPrefabParent: 0
@@ -526,6 +531,10 @@ Prefab:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1035924144559260, guid: 3e18cd0705311904f965eb7674cf4c28, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3e18cd0705311904f965eb7674cf4c28, type: 2}
   m_IsPrefabParent: 0
@@ -599,6 +608,11 @@ Canvas:
   m_PrefabParentObject: {fileID: 223363034319062348, guid: 3e18cd0705311904f965eb7674cf4c28,
     type: 2}
   m_PrefabInternal: {fileID: 845320947}
+--- !u!223 &1484338691 stripped
+Canvas:
+  m_PrefabParentObject: {fileID: 223553008189283266, guid: 5c9c90a70bd70574ebd4bc5e92473897,
+    type: 2}
+  m_PrefabInternal: {fileID: 209926551}
 --- !u!1 &1972567661
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,7 +641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainMenu: {fileID: 903014694}
-  controlsScreen: {fileID: 0}
+  controlsScreen: {fileID: 1484338691}
 --- !u!4 &1972567663
 Transform:
   m_ObjectHideFlags: 0
