@@ -37,7 +37,7 @@ public class MouseOrbitImproved : MonoBehaviour
         }
     }
 
-    void LateUpdate()
+    void Update()
     {
         if (target)
         {
