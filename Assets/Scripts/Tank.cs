@@ -1,8 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[CreateAssetMenu(menuName = "Tank")]
 public class Tank : ScriptableObject
 {
-    private int Health;
+    public int Health;
+    /*afterthoughts
+     * public int armor
+     */
 }
