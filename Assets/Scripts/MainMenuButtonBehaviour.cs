@@ -1,6 +1,8 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class ButtonBehaviour : MonoBehaviour
+public class MainMenuButtonBehaviour : MonoBehaviour
 {
     public Canvas mainMenu;
     public Canvas controlsScreen;
@@ -9,7 +11,7 @@ public class ButtonBehaviour : MonoBehaviour
     {
         GameState.Instance.LoadScene(value);
     }
-  
+
     public void onMultiplayerClicked(string value)
     {
         GameState.Instance.LoadScene(value);
