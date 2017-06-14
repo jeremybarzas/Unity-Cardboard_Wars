@@ -466,7 +466,7 @@ GameObject:
   - component: {fileID: 4200185330798174}
   - component: {fileID: 95073664252189450}
   m_Layer: 0
-  m_Name: TankMesh
+  m_Name: TankRedPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

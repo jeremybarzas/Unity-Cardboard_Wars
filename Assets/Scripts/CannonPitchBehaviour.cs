@@ -12,15 +12,14 @@ public class CannonPitchBehaviour : MonoBehaviour
     void PitchCannon(GameObject target)
     {
         // store new rotation with Quaternion.LookRotation Method.
-        var targetPositon = target.transform.position;
-        var targetRotation = Quaternion.LookRotation(targetPositon - transform.position);
-        
-        // lock cannon y and z axis in place
-        //targetRotation.y = transform.rotation.y;
-        //targetRotation.z = transform.rotation.z;
+        var targetRotation = Quaternion.LookRotation(target.transform.position - transform.position);
 
-        // set rotation of the object 
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 2 * Time.deltaTime);        
+        // lock turret x and z axis in place
+        //targetRotation.y = transform.localRotation.y;
+        //targetRotation.z = transform.localRotation.z;
+
+        // set rotation of the object
+        transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotation, 4 * Time.deltaTime);
     }
 
     void OnDrawGizmos()
