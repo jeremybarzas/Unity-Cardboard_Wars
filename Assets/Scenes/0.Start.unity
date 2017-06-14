@@ -648,30 +648,6 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1972567662}
-    - target: {fileID: 1151397482948102, guid: 5c9c90a70bd70574ebd4bc5e92473897, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114501019005526362, guid: 5c9c90a70bd70574ebd4bc5e92473897,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: onBackClicked
-      objectReference: {fileID: 0}
-    - target: {fileID: 114042722518186218, guid: 5c9c90a70bd70574ebd4bc5e92473897,
-        type: 2}
-      propertyPath: m_Text
-      value: Back
-      objectReference: {fileID: 0}
-    - target: {fileID: 224085778071020190, guid: 5c9c90a70bd70574ebd4bc5e92473897,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: -344.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 224085778071020190, guid: 5c9c90a70bd70574ebd4bc5e92473897,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 206.2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5c9c90a70bd70574ebd4bc5e92473897, type: 2}
   m_IsPrefabParent: 0

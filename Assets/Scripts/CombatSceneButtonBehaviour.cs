@@ -6,11 +6,13 @@ public class CombatSceneButtonBehaviour : MonoBehaviour
 {
     public Canvas pauseMenu;
     public Canvas controls;
+    private bool paused;
 
     public void onResumeClicked()
     {
         pauseMenu.enabled = false;
         GameState.Instance.UnpauseGame();
+        paused = false;
     }
 
     public void onControlsClicked()
@@ -37,16 +39,22 @@ public class CombatSceneButtonBehaviour : MonoBehaviour
 
     void Start()
     {
+        GameState.Instance.UnpauseGame();
+        paused = false;
         pauseMenu.enabled = false;
         controls.enabled = false;
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (!paused)
         {
-            pauseMenu.enabled = true;
-            GameState.Instance.PauseGame();
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                paused = true;
+                pauseMenu.enabled = true;
+                GameState.Instance.PauseGame();
+            }
         }
     }
 }
