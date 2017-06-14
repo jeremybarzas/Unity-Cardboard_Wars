@@ -299,7 +299,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4322271162061116, guid: 7100904f8f7b61d45b9c853504742efb, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4322271162061116, guid: 7100904f8f7b61d45b9c853504742efb, type: 2}
       propertyPath: m_LocalRotation.z
@@ -307,7 +307,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4322271162061116, guid: 7100904f8f7b61d45b9c853504742efb, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4322271162061116, guid: 7100904f8f7b61d45b9c853504742efb, type: 2}
       propertyPath: m_RootOrder
@@ -316,11 +316,45 @@ Prefab:
     - target: {fileID: 114282874482787678, guid: 7100904f8f7b61d45b9c853504742efb,
         type: 2}
       propertyPath: speed
-      value: 4.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4535870214652844, guid: 7100904f8f7b61d45b9c853504742efb, type: 2}
       propertyPath: m_LocalPosition.y
       value: 3.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 54045247592361030, guid: 7100904f8f7b61d45b9c853504742efb,
+        type: 2}
+      propertyPath: m_Interpolate
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114614853606552430, guid: 7100904f8f7b61d45b9c853504742efb,
+        type: 2}
+      propertyPath: yMinLimit
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114614853606552430, guid: 7100904f8f7b61d45b9c853504742efb,
+        type: 2}
+      propertyPath: yMaxLimit
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4322271162061116, guid: 7100904f8f7b61d45b9c853504742efb, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114614853606552430, guid: 7100904f8f7b61d45b9c853504742efb,
+        type: 2}
+      propertyPath: xMinLimit
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114614853606552430, guid: 7100904f8f7b61d45b9c853504742efb,
+        type: 2}
+      propertyPath: xMaxLimit
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 54045247592361030, guid: 7100904f8f7b61d45b9c853504742efb,
+        type: 2}
+      propertyPath: m_IsKinematic
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7100904f8f7b61d45b9c853504742efb, type: 2}
@@ -432,7 +466,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 998893538}
-  m_PlaneDistance: 5
+  m_PlaneDistance: 14
   m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
