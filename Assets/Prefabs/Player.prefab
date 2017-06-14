@@ -1114,6 +1114,7 @@ GameObject:
   - component: {fileID: 4322271162061116}
   - component: {fileID: 114282874482787678}
   - component: {fileID: 54045247592361030}
+  - component: {fileID: 114864848319969682}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1441,7 +1442,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1598027271110212}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 2.5}
+  m_LocalPosition: {x: -0.054, y: 1.5, z: 2.976}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4322271162061116}
@@ -2512,6 +2513,20 @@ MonoBehaviour:
   yMaxLimit: 30
   distanceMin: 0.5
   distanceMax: 30
+--- !u!114 &114864848319969682
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1894981434084434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b3338b7c0d419c4aa0b05ed92f2655f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TankShell: {fileID: 1526931482927050, guid: f3b3f71723ac05e4a84f805f0e6bea2a, type: 2}
+  ShellSpawn: {fileID: 4130527076721892}
+  ShootingAudioSource: {fileID: 0}
 --- !u!124 &124337729268156118
 Behaviour:
   m_ObjectHideFlags: 1
