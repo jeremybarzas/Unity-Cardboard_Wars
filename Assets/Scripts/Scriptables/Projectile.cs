@@ -5,5 +5,5 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Projectile")]
 public class Projectile : ScriptableObject
 {
-    private int Damage;
+   public int Damage = 10;
 }
