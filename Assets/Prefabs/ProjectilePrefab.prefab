@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 54168250362379444}
   - component: {fileID: 135253426679760622}
   - component: {fileID: 114436574914412176}
+  - component: {fileID: 135310660865638724}
   m_Layer: 0
   m_Name: ProjectilePrefab
   m_TagString: Projectile
@@ -67,7 +68,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1526931482927050}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 5.5202684, y: 17.566, z: -7.3201985}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4229499209625408}
@@ -158,8 +159,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileConfig: {fileID: 11400000, guid: 79c40625440052a4690decabd5f39388, type: 2}
   Dmg: 10
-  shell: {fileID: 1526931482927050}
 --- !u!135 &135253426679760622
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1526931482927050}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.20206061
+  m_Center: {x: 0, y: 0.20206061, z: 0}
+--- !u!135 &135310660865638724
 SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -169,5 +181,5 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.20206061
-  m_Center: {x: 0, y: 0.20206061, z: 0}
+  m_Radius: 0.2020606
+  m_Center: {x: 0, y: 0.2020606, z: 0}
