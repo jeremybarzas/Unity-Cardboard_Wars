@@ -1,27 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Events;
+﻿using UnityEngine;
+
 public class TankBehaviour : MonoBehaviour
 {
-
-
-    public static OnHealthChanged onHealthChanged;
-    public ProjectileBehaviour shellPrefab;
+    public static OnHealthChanged onHealthChanged = new OnHealthChanged();
     public int hp;
-    public Animator tankDeathAnimator;
-    void Awake()
-    {
-        onHealthChanged = new OnHealthChanged();
-    }
-
-
+    public ProjectileBehaviour shellPrefab;
 
     public Tank tank_Attrib;
-    public static OnHealthChanged onHealthChanged = new OnHealthChanged();
-    public ProjectileBehaviour shellPrefab;
-    public int hp;
- 
+    public Animator tankDeathAnimator;
+    
     public void OnTriggerEnter(Collider other)
 
     {
@@ -31,5 +18,4 @@ public class TankBehaviour : MonoBehaviour
         var stringtosend = string.Format("{0},{1}", name, hp);
         onHealthChanged.Invoke(stringtosend);
     }
-
 }

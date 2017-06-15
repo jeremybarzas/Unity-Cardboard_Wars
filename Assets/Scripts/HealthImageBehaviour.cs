@@ -35,7 +35,14 @@ public class HealthImageBehaviour : MonoBehaviour
         
         var spriteToLoadName = startstring + playerHp + endstring;
         var spritesheet = Resources.LoadAll<Sprite>("healthbar");
-        image.overrideSprite = spritesheet.First(x => x.name == spriteToLoadName) as Sprite;
+        var sprite = spritesheet.FirstOrDefault(x => x.name == spriteToLoadName);
+        if (sprite == null)
+        {
+            Debug.LogWarning(":(");
+            return;
+        }
+
+        image.overrideSprite = sprite;
     }
 
 }

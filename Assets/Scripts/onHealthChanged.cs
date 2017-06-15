@@ -7,4 +7,3 @@ using UnityEngine.Events;
 public class OnHealthChanged : UnityEvent<string>
 {
 }
-
