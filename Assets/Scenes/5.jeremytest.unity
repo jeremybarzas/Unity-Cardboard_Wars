@@ -524,12 +524,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 534758081}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3.4318237, y: 19.55, z: 26.2}
   m_LocalScale: {x: 5.64903, y: 5.649031, z: 5.649031}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_Father: {fileID: 1782430013}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &534758087
 MonoBehaviour:
@@ -767,6 +767,7 @@ GameObject:
   - component: {fileID: 781924934}
   - component: {fileID: 781924936}
   - component: {fileID: 781924935}
+  - component: {fileID: 781924937}
   m_Layer: 5
   m_Name: P2 Health
   m_TagString: Untagged
@@ -825,6 +826,31 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 781924933}
+--- !u!114 &781924937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 781924933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd0048a684a3d914aabb568a053c4345, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1782430012}
+  playerHealth: {fileID: 21300000, guid: dee0ec64217d04c4292371105b4f8a0f, type: 3}
+  healthStates:
+  - {fileID: 21300000, guid: dee0ec64217d04c4292371105b4f8a0f, type: 3}
+  - {fileID: 21300002, guid: dee0ec64217d04c4292371105b4f8a0f, type: 3}
+  - {fileID: 21300004, guid: dee0ec64217d04c4292371105b4f8a0f, type: 3}
+  - {fileID: 21300006, guid: dee0ec64217d04c4292371105b4f8a0f, type: 3}
+  - {fileID: 21300008, guid: dee0ec64217d04c4292371105b4f8a0f, type: 3}
+  - {fileID: 21300010, guid: dee0ec64217d04c4292371105b4f8a0f, type: 3}
+  - {fileID: 21300012, guid: dee0ec64217d04c4292371105b4f8a0f, type: 3}
+  - {fileID: 21300014, guid: dee0ec64217d04c4292371105b4f8a0f, type: 3}
+  - {fileID: 21300016, guid: dee0ec64217d04c4292371105b4f8a0f, type: 3}
+  - {fileID: 21300018, guid: dee0ec64217d04c4292371105b4f8a0f, type: 3}
+  - {fileID: 21300020, guid: dee0ec64217d04c4292371105b4f8a0f, type: 3}
 --- !u!223 &976514612 stripped
 Canvas:
   m_PrefabParentObject: {fileID: 223113819087543506, guid: e8201ce394cd720468d29a9df0ab8d5b,
@@ -1106,6 +1132,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1104023595}
+--- !u!114 &1143565523 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114671515407817788, guid: 7100904f8f7b61d45b9c853504742efb,
+    type: 2}
+  m_PrefabInternal: {fileID: 1479898060}
+  m_Script: {fileID: 11500000, guid: 1060faa379ddbdd4daa81cc44a1806c4, type: 3}
 --- !u!1001 &1328027056
 Prefab:
   m_ObjectHideFlags: 0
@@ -1491,7 +1523,6 @@ GameObject:
   - component: {fileID: 1664928918}
   - component: {fileID: 1664928917}
   - component: {fileID: 1664928916}
-  - component: {fileID: 1664928920}
   m_Layer: 5
   m_Name: PlayerHUDCanvas
   m_TagString: Untagged
@@ -1576,31 +1607,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1664928920
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1664928915}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd0048a684a3d914aabb568a053c4345, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player1Health: {fileID: 0}
-  player2Health: {fileID: 0}
-  healthStates:
-  - {fileID: 21300000, guid: dee0ec64217d04c4292371105b4f8a0f, type: 3}
-  - {fileID: 21300002, guid: dee0ec64217d04c4292371105b4f8a0f, type: 3}
-  - {fileID: 21300004, guid: dee0ec64217d04c4292371105b4f8a0f, type: 3}
-  - {fileID: 21300006, guid: dee0ec64217d04c4292371105b4f8a0f, type: 3}
-  - {fileID: 21300008, guid: dee0ec64217d04c4292371105b4f8a0f, type: 3}
-  - {fileID: 21300010, guid: dee0ec64217d04c4292371105b4f8a0f, type: 3}
-  - {fileID: 21300012, guid: dee0ec64217d04c4292371105b4f8a0f, type: 3}
-  - {fileID: 21300014, guid: dee0ec64217d04c4292371105b4f8a0f, type: 3}
-  - {fileID: 21300016, guid: dee0ec64217d04c4292371105b4f8a0f, type: 3}
-  - {fileID: 21300018, guid: dee0ec64217d04c4292371105b4f8a0f, type: 3}
-  - {fileID: 21300020, guid: dee0ec64217d04c4292371105b4f8a0f, type: 3}
 --- !u!1 &1712338947
 GameObject:
   m_ObjectHideFlags: 0
@@ -1695,6 +1701,51 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1782430011
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1782430013}
+  - component: {fileID: 1782430012}
+  m_Layer: 0
+  m_Name: TestTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1782430012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1782430011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1060faa379ddbdd4daa81cc44a1806c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tank_Attrib: {fileID: 11400000, guid: e0c5ad8689a7d17428b005a98a5b9e3d, type: 2}
+  shellPrefab: {fileID: 114436574914412176, guid: f3b3f71723ac05e4a84f805f0e6bea2a,
+    type: 2}
+  hp: 100
+--- !u!4 &1782430013
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1782430011}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 534758086}
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1800778239 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4720979654542706, guid: cbe9083b972ad624889c3b61316f5cd2,
@@ -1800,6 +1851,7 @@ GameObject:
   - component: {fileID: 1936326516}
   - component: {fileID: 1936326518}
   - component: {fileID: 1936326517}
+  - component: {fileID: 1936326519}
   m_Layer: 5
   m_Name: P1 Health
   m_TagString: Untagged
@@ -1858,3 +1910,28 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1936326515}
+--- !u!114 &1936326519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1936326515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd0048a684a3d914aabb568a053c4345, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1143565523}
+  playerHealth: {fileID: 21300000, guid: dee0ec64217d04c4292371105b4f8a0f, type: 3}
+  healthStates:
+  - {fileID: 21300000, guid: dee0ec64217d04c4292371105b4f8a0f, type: 3}
+  - {fileID: 21300002, guid: dee0ec64217d04c4292371105b4f8a0f, type: 3}
+  - {fileID: 21300004, guid: dee0ec64217d04c4292371105b4f8a0f, type: 3}
+  - {fileID: 21300006, guid: dee0ec64217d04c4292371105b4f8a0f, type: 3}
+  - {fileID: 21300008, guid: dee0ec64217d04c4292371105b4f8a0f, type: 3}
+  - {fileID: 21300010, guid: dee0ec64217d04c4292371105b4f8a0f, type: 3}
+  - {fileID: 21300012, guid: dee0ec64217d04c4292371105b4f8a0f, type: 3}
+  - {fileID: 21300014, guid: dee0ec64217d04c4292371105b4f8a0f, type: 3}
+  - {fileID: 21300016, guid: dee0ec64217d04c4292371105b4f8a0f, type: 3}
+  - {fileID: 21300018, guid: dee0ec64217d04c4292371105b4f8a0f, type: 3}
+  - {fileID: 21300020, guid: dee0ec64217d04c4292371105b4f8a0f, type: 3}
