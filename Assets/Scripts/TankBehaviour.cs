@@ -5,6 +5,7 @@ using UnityEngine.Events;
 public class TankBehaviour : MonoBehaviour
 {
 
+
     public static OnHealthChanged onHealthChanged;
     public ProjectileBehaviour shellPrefab;
     public int hp;
@@ -14,40 +15,21 @@ public class TankBehaviour : MonoBehaviour
         onHealthChanged = new OnHealthChanged();
     }
 
-    void Start()
+
+
+    public Tank tank_Attrib;
+    public static OnHealthChanged onHealthChanged = new OnHealthChanged();
+    public ProjectileBehaviour shellPrefab;
+    public int hp;
+ 
+    public void OnTriggerEnter(Collider other)
+
     {
-        hp = 100;
-        onHealthChanged.Invoke(this);
+        if (!other.CompareTag("Projectile")) return;
+
+        hp -= shellPrefab.Dmg;
+        var stringtosend = string.Format("{0},{1}", name, hp);
+        onHealthChanged.Invoke(stringtosend);
     }
 
-    void OnEnable()
-    {
-        hp = 100;
-        onHealthChanged.Invoke(this);
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Projectile"))
-        {
-            if (hp > 10)
-            {
-                hp -= shellPrefab.Dmg;
-                Destroy(other.gameObject);
-                onHealthChanged.Invoke(this);
-            }
-            else if (hp == 10)
-            {
-                hp -= shellPrefab.Dmg;
-                //tank death animator goes here
-            }
-            Debug.Log(hp);
-        }
-        
-    }
-
-	void Update ()
-    {
-        
-	}
 }
