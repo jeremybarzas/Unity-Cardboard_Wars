@@ -5,17 +5,16 @@ using UnityEngine.Events;
 public class TankBehaviour : MonoBehaviour
 {
     public Tank tank_Attrib;
-    public OnHealthChanged onHealthChanged = new OnHealthChanged();
+    public static OnHealthChanged onHealthChanged = new OnHealthChanged();
     public ProjectileBehaviour shellPrefab;
     public int hp;
-
-    void OnTriggerEnter(Collider other)
+ 
+    public void OnTriggerEnter(Collider other)
     {
-        if (CompareTag("Player"))
-        {
-            hp -= shellPrefab.Dmg;
-            onHealthChanged.Invoke(hp);
-            Debug.Log(hp);
-        }
+        if (!other.CompareTag("Projectile")) return;
+
+        hp -= shellPrefab.Dmg;
+        var stringtosend = string.Format("{0},{1}", name, hp);
+        onHealthChanged.Invoke(stringtosend);
     }
 }

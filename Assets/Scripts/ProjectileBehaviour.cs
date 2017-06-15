@@ -11,7 +11,7 @@ public class ProjectileBehaviour : MonoBehaviour
     {
         if (CompareTag("Player"))
         {
-            DestroyImmediate(this, true);
+           Destroy(this);
         }
     }
 	// Use this for initialization

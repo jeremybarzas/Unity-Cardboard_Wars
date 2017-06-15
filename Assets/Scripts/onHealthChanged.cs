@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class OnHealthChanged : UnityEvent<int>
+
+public class OnHealthChanged : UnityEvent<string>
 {
 }
+
