@@ -6,22 +6,17 @@ public class ProjectileBehaviour : MonoBehaviour
 {
     public Projectile projectileConfig;
     public int Dmg;
-    public GameObject shell;
-    void OnTriggerEnter(Collider other)
-    {
-        if (CompareTag("Player"))
-        {
-           Destroy(this);
-        }
-    }
+
 	// Use this for initialization
 	void Start ()
 	{
 	    Dmg = projectileConfig.Damage;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    void OnTriggerEnter(Collider other)
+    {
+    if(other.CompareTag("Player"))
+        Destroy(this.gameObject);
+    }
+
 }

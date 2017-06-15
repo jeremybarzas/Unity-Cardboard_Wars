@@ -4,12 +4,26 @@ using UnityEngine;
 using UnityEngine.Events;
 public class TankBehaviour : MonoBehaviour
 {
+
+
+    public static OnHealthChanged onHealthChanged;
+    public ProjectileBehaviour shellPrefab;
+    public int hp;
+    public Animator tankDeathAnimator;
+    void Awake()
+    {
+        onHealthChanged = new OnHealthChanged();
+    }
+
+
+
     public Tank tank_Attrib;
     public static OnHealthChanged onHealthChanged = new OnHealthChanged();
     public ProjectileBehaviour shellPrefab;
     public int hp;
  
     public void OnTriggerEnter(Collider other)
+
     {
         if (!other.CompareTag("Projectile")) return;
 
@@ -17,4 +31,5 @@ public class TankBehaviour : MonoBehaviour
         var stringtosend = string.Format("{0},{1}", name, hp);
         onHealthChanged.Invoke(stringtosend);
     }
+
 }
