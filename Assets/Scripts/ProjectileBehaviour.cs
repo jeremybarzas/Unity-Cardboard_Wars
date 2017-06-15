@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class ProjectileBehaviour : MonoBehaviour
 {
-    public ScriptableObject ProjectileScriptableObject;
-    private int Dmg;
-    private GameObject shell;
+    public Projectile projectileConfig;
+    public int Dmg;
+    public GameObject shell;
     void OnTriggerEnter(Collider other)
     {
         if (CompareTag("Player"))
         {
-            Destroy(shell);
+            DestroyImmediate(this, true);
         }
     }
 	// Use this for initialization
 	void Start ()
 	{
-	    Dmg = GetComponent<Projectile>().Damage;
+	    Dmg = projectileConfig.Damage;
 	}
 	
 	// Update is called once per frame
