@@ -10,7 +10,8 @@ public class TankShootingBehaviour : MonoBehaviour
     private Vector3 direction;    
     private float shootForce = 20.0f;
     private Vector3 shootDistance;
-
+    public float fireRate = 0.5f;
+    private float nextFire;
     public AudioSource ShootingAudioSource;
     public AudioClip shot1;
     public AudioClip shot2;
@@ -41,8 +42,9 @@ public class TankShootingBehaviour : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{        
-	    if (Input.GetButtonDown("Fire1"))
+	    if (Input.GetButtonDown("Fire1") && Time.time > nextFire)
 	    {
+	        nextFire = Time.time + fireRate;
 	        Fire();
 	    }
     }
