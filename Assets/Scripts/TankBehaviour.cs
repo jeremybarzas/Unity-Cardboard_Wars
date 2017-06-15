@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-public class TankBehaviour : MonoBehaviour
+public class TankBehavoiur : MonoBehaviour
 {
-    public ScriptableObject tank_Attrib;
-    public static OnHealthChanged onHealthChanged;
-    private TankBehaviour tankBehaviour;
+    public Tank tank;
+    public OnHealthChanged onHealthChanged;
     public Animator tankDeath;
 	// Use this for initialization
     private int hp;
@@ -19,12 +18,16 @@ public class TankBehaviour : MonoBehaviour
         }
     }
 
+    void Awake()
+    {
+        onHealthChanged = new OnHealthChanged();
+    }
     void OnEnable()
     {
         hp = 100;
     }
     void Start () {
-		
+		onHealthChanged.Invoke(this);
 	}
 	
 	// Update is called once per frame
@@ -34,5 +37,6 @@ public class TankBehaviour : MonoBehaviour
 
     public class OnHealthChanged : UnityEvent<TankBehavoiur>
     {
+    
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Tank")]
 public class Tank : ScriptableObject
 {
-    public int Health;
+    public int Health = 100;
     /*afterthoughts
      * public int armor
      */
