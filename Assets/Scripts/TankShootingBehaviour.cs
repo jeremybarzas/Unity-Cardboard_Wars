@@ -7,10 +7,15 @@ public class TankShootingBehaviour : MonoBehaviour
     public GameObject TankShell;
     private GameObject TankShell_RunTime;
     public Transform ShellSpawn;
-    private Vector3 direction;
-    public AudioSource ShootingAudioSource;
+    private Vector3 direction;    
     private float shootForce = 20.0f;
     private Vector3 shootDistance;
+
+    public AudioSource ShootingAudioSource;
+    public AudioClip shot1;
+    public AudioClip shot2;
+    public AudioClip shot3;
+    public List<AudioClip> shotSounds;
     /*afterthoughts go down here v
     private Random shootCone;
     */
@@ -20,10 +25,18 @@ public class TankShootingBehaviour : MonoBehaviour
         TankShell_RunTime = Instantiate(TankShell, ShellSpawn.position, ShellSpawn.rotation);
         Rigidbody shellRB = TankShell_RunTime.GetComponent<Rigidbody>();
         shellRB.AddForce(direction * shootForce, ForceMode.Impulse);
+        var c = Random.Range(0, 2);
+        Debug.Log(c);
+        ShootingAudioSource.clip = shotSounds[c];
+        ShootingAudioSource.Play();
     }
 	// Use this for initialization
     void Start()
     {
+        shotSounds = new List<AudioClip>();
+        shotSounds.Add(shot1);
+        shotSounds.Add(shot2);
+        shotSounds.Add(shot3);
     }
 	
 	// Update is called once per frame

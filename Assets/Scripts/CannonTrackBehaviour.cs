@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Tracker : MonoBehaviour
+public class CannonTrackBehaviour : MonoBehaviour
 {
     public Transform tank;
     public Transform target;

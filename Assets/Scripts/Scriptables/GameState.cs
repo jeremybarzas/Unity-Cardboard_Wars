@@ -24,12 +24,10 @@ public class GameState : ScriptableSingleton<GameState>
     public void PauseGame()
     {
         Time.timeScale = 0f;
-        Debug.Log("pause");
     }
 
     public void UnpauseGame()
     {
         Time.timeScale = 1f;
-        Debug.Log("unpause");
     }
 }
