@@ -26,7 +26,6 @@ public class TankShootingBehaviour : MonoBehaviour
         Rigidbody shellRB = TankShell_RunTime.GetComponent<Rigidbody>();
         shellRB.AddForce(direction * shootForce, ForceMode.Impulse);
         var c = Random.Range(0, 2);
-        Debug.Log(c);
         ShootingAudioSource.clip = shotSounds[c];
         ShootingAudioSource.Play();
     }
