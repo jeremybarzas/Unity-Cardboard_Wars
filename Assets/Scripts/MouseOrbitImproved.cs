@@ -4,14 +4,14 @@ using System.Collections;
 [AddComponentMenu("Camera-Control/Mouse Orbit with zoom")]
 public class MouseOrbitImproved : MonoBehaviour
 {
-
+    public Transform tank;
     public Transform target;
     public float distance = 5.0f;
-    public float xSpeed = 120.0f;
-    public float ySpeed = 120.0f;
 
     public float yMinLimit = -20f;
     public float yMaxLimit = 80f;
+    public float xMinLimit = -20f;
+    public float xMaxLimit = 80f;
 
     public float distanceMin = .5f;
     public float distanceMax = 5f;
@@ -39,11 +39,15 @@ public class MouseOrbitImproved : MonoBehaviour
 
     void Update()
     {
+        xMaxLimit = tank.rotation.eulerAngles.y + 20f;
+        xMinLimit = tank.rotation.eulerAngles.y - 20f;
+
         if (target)
         {
-            x += Input.GetAxis("Mouse X") * xSpeed * distance * 0.02f;
-            y -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
+            x += Input.GetAxis("Tankx");
+            y -= Input.GetAxis("Tanky");
 
+            x = ClampAngle(x, xMinLimit, xMaxLimit);
             y = ClampAngle(y, yMinLimit, yMaxLimit);
 
             Quaternion rotation = Quaternion.Euler(y, x, 0);
@@ -61,6 +65,7 @@ public class MouseOrbitImproved : MonoBehaviour
 
             transform.rotation = rotation;
             transform.position = position;
+            Debug.Log(transform.position);
         }
     }
 

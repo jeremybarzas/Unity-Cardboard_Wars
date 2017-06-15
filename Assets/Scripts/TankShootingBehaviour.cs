@@ -16,7 +16,7 @@ public class TankShootingBehaviour : MonoBehaviour
     */
     void Fire()
     {
-        direction = transform.forward; 
+        direction = ShellSpawn.transform.forward; 
         TankShell_RunTime = Instantiate(TankShell, ShellSpawn.position, ShellSpawn.rotation);
         Rigidbody shellRB = TankShell_RunTime.GetComponent<Rigidbody>();
         shellRB.AddForce(direction * shootForce, ForceMode.Impulse);
@@ -28,10 +28,10 @@ public class TankShootingBehaviour : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update ()
-	{
-	    if (Input.GetKeyDown(KeyCode.Mouse0))
+	{        
+	    if (Input.GetButtonDown("Fire1"))
 	    {
 	        Fire();
 	    }
-	}
+    }
 }
