@@ -1,53 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Events;
+﻿using UnityEngine;
+
 public class TankBehaviour : MonoBehaviour
 {
-
-    public static OnHealthChanged onHealthChanged;
-    public ProjectileBehaviour shellPrefab;
+    public static OnHealthChanged onHealthChanged = new OnHealthChanged();
     public int hp;
+    public ProjectileBehaviour shellPrefab;
+
+    public Tank tank_Attrib;
     public Animator tankDeathAnimator;
-    void Awake()
-    {
-        onHealthChanged = new OnHealthChanged();
-    }
+    
+    public void OnTriggerEnter(Collider other)
 
-    void Start()
     {
-        hp = 100;
-        onHealthChanged.Invoke(this);
-    }
+        if (!other.CompareTag("Projectile")) return;
 
-    void OnEnable()
-    {
-        hp = 100;
-        onHealthChanged.Invoke(this);
+        hp -= shellPrefab.Dmg;
+        var stringtosend = string.Format("{0},{1}", name, hp);
+        onHealthChanged.Invoke(stringtosend);
     }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Projectile"))
-        {
-            if (hp > 10)
-            {
-                hp -= shellPrefab.Dmg;
-                Destroy(other.gameObject);
-                onHealthChanged.Invoke(this);
-            }
-            else if (hp == 10)
-            {
-                hp -= shellPrefab.Dmg;
-                //tank death animator goes here
-            }
-            Debug.Log(hp);
-        }
-        
-    }
-
-	void Update ()
-    {
-        
-	}
 }

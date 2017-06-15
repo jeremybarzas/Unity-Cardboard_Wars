@@ -4,28 +4,45 @@ using System.Linq.Expressions;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using System.Linq;
 
 public class HealthImageBehaviour : MonoBehaviour
 {
-    public OnHealthChanged healthChanged;
-    public Sprite playerHealth;
-    public List<Sprite> healthStates;
-
+    public TankBehaviour player;
+    public Image image;
+    public string startstring = "healthbar_";
+    public string endstring = "%";
     void Awake()
     {
-        healthChanged.AddListener(SetImage);
+       TankBehaviour.onHealthChanged.AddListener(SetImage);
     }
 
     void Start()
     {
-        healthStates = new List<Sprite>();
+        image = GetComponent<Image>();
     }
 
-    private void SetImage(TankBehaviour tank)
+    public void SetImage(string value)
     {
-        if (tank.hp == 100)
+        //i'm expecting a string that looks like "Player1,<hpnumber>"
+        var splitstring = value.Split(',');
+
+        var playerId = splitstring[0];
+
+        if (name != playerId)
+            return;
+        var playerHp = splitstring[1];
+        
+        var spriteToLoadName = startstring + playerHp + endstring;
+        var spritesheet = Resources.LoadAll<Sprite>("healthbar");
+        var sprite = spritesheet.FirstOrDefault(x => x.name == spriteToLoadName);
+        if (sprite == null)
         {
-            playerHealth = healthStates[0];
+            Debug.LogWarning(":(");
+            return;
         }
+
+        image.overrideSprite = sprite;
     }
+
 }

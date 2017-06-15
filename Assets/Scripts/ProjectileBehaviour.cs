@@ -12,15 +12,10 @@ public class ProjectileBehaviour : MonoBehaviour
 	{
 	    Dmg = projectileConfig.Damage;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
     void OnTriggerEnter(Collider other)
     {
-        if(!other.CompareTag("Player") || other.CompareTag("Player"))
+    if(other.CompareTag("Player"))
         Destroy(this.gameObject);
     }
 
