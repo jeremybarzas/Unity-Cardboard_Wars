@@ -5,6 +5,7 @@ using UnityEngine;
 public class ProjectileBehaviour : MonoBehaviour
 {
     public Projectile projectileConfig;
+    public bool harmful = true;
     public int Dmg;
 
 	// Use this for initialization
@@ -12,11 +13,4 @@ public class ProjectileBehaviour : MonoBehaviour
 	{
 	    Dmg = projectileConfig.Damage;
 	}
-
-    void OnTriggerEnter(Collider other)
-    {
-    if(other.CompareTag("Player"))
-        Destroy(this.gameObject);
-    }
-
 }
