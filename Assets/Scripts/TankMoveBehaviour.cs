@@ -2,8 +2,8 @@
 
 public class TankMoveBehaviour : MonoBehaviour
 {
-    public float m_MovementInputValue;         // The current value of the movement input.
-    public float m_TurnInputValue;             // The current value of the turn input.Name;
+    private float m_MovementInputValue;         // The current value of the movement input.
+    private float m_TurnInputValue;             // The current value of the turn input.Name;
     public AudioSource m_MovementAudio;         // Reference to the audio source used to play engine sounds. NB: different to the shooting audio source.
     public AudioClip m_EngineIdling;            // Audio to play when the tank isn't moving.
     public AudioClip m_EngineDriving;           // Audio to play when the tank is moving.
@@ -13,7 +13,7 @@ public class TankMoveBehaviour : MonoBehaviour
 
     private void CharacterMove()
     {
-        var y = Input.GetAxis("Horizontal") * Time.deltaTime * speed * 25;
+        var y = Input.GetAxis("Horizontal") * Time.deltaTime * speed * 15;
         m_TurnInputValue = y;        
         var z = Input.GetAxis("Vertical") * Time.deltaTime * speed;
         m_MovementInputValue = z;

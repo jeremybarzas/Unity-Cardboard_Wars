@@ -19,6 +19,6 @@ public class CannonTrackBehaviour : MonoBehaviour
         if (Quaternion.Angle(q, baseRotation) <= maxAngle)
             targetRotation = q;
 
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 3f);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 5f);
     }
 }
