@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 [CreateAssetMenu(menuName = "GameState", fileName = "GameState")]
 public class GameState : ScriptableSingleton<GameState>

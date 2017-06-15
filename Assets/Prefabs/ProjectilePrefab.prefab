@@ -39,9 +39,10 @@ GameObject:
   - component: {fileID: 4555838751118012}
   - component: {fileID: 54168250362379444}
   - component: {fileID: 135253426679760622}
+  - component: {fileID: 114436574914412176}
   m_Layer: 0
   m_Name: ProjectilePrefab
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -144,6 +145,20 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114436574914412176
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1526931482927050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83c44040176a48d4cbfa605445c6b5b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectileConfig: {fileID: 11400000, guid: 79c40625440052a4690decabd5f39388, type: 2}
+  Dmg: 10
+  shell: {fileID: 1526931482927050}
 --- !u!135 &135253426679760622
 SphereCollider:
   m_ObjectHideFlags: 1

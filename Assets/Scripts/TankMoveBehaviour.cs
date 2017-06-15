@@ -2,41 +2,44 @@
 
 public class TankMoveBehaviour : MonoBehaviour
 {
-    private float m_MovementInputValue;         // The current value of the movement input.
-    private float m_TurnInputValue;             // The current value of the turn input.Name;
-    public AudioSource m_MovementAudio;         // Reference to the audio source used to play engine sounds. NB: different to the shooting audio source.
-    public AudioClip m_EngineIdling;            // Audio to play when the tank isn't moving.
-    public AudioClip m_EngineDriving;           // Audio to play when the tank is moving.
-    public float m_PitchRange = 0.2f;           // The amount by which the pitch of the engine noises can vary.
-    private float m_OriginalPitch;              // The pitch of the audio source at the start of the scene.
+    public AudioClip m_EngineDriving;
+    public AudioClip m_EngineIdling;
+    public AudioSource m_MovementAudio;
+
+    private float m_MovementInputValue;
+    private float m_OriginalPitch;
+    public float m_PitchRange = 0.2f;
+    private float m_TurnInputValue;
     public float speed = 5;
 
     private void CharacterMove()
     {
         var y = Input.GetAxis("Horizontal") * Time.deltaTime * speed * 15;
-        m_TurnInputValue = y;        
+        m_TurnInputValue = y;
         var z = Input.GetAxis("Vertical") * Time.deltaTime * speed;
         m_MovementInputValue = z;
 
         transform.Rotate(0, y, 0);
         transform.Translate(0, 0, z);
     }
+
     private void OnEnable()
     {
         // Also reset the input values.
         m_MovementInputValue = 0f;
         m_TurnInputValue = 0f;
     }
+
     private void Start()
-    {     
+    {
         m_OriginalPitch = m_MovementAudio.pitch;
     }
+
     private void Update()
     {
         CharacterMove();
         EngineAudio();
-    }    
-    
+    }
 
     private void EngineAudio()
     {
