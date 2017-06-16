@@ -12,6 +12,11 @@ public class GameState : ScriptableSingleton<GameState>
         SceneManager.LoadScene(value);
     }
 
+    public void RestartScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
     public void QuitGame()
     {
         Application.Quit();

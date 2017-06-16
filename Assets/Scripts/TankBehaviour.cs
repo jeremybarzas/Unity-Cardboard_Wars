@@ -3,6 +3,7 @@
 public class TankBehaviour : MonoBehaviour
 {
     public static OnHealthChanged onHealthChanged = new OnHealthChanged();
+    public static OnTankDeath onTankDeath = new OnTankDeath();
     public int hp;
 
     public Tank tank_Attrib;
@@ -11,6 +12,11 @@ public class TankBehaviour : MonoBehaviour
     private void Start()
     {
         hp = tank_Attrib.Health;
+    }
+
+    void update()
+    {
+        
     }
 
     public void OnTriggerEnter(Collider other)
@@ -24,5 +30,9 @@ public class TankBehaviour : MonoBehaviour
         hp -= projectile.Dmg;
         var stringtosend = string.Format("{0},{1}", name, hp);
         onHealthChanged.Invoke(stringtosend);
+        if (hp <= 0)
+        {
+            onTankDeath.Invoke(name);
+        }
     }
 }

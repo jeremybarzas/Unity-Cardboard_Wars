@@ -37,8 +37,8 @@ GameObject:
   - component: {fileID: 20125056109337092}
   - component: {fileID: 124342223864222344}
   - component: {fileID: 92728659329081162}
-  - component: {fileID: 114204770513934398}
   - component: {fileID: 81124277082071584}
+  - component: {fileID: 114027152116487430}
   m_Layer: 5
   m_Name: PlayerCamera
   m_TagString: Untagged
@@ -123,7 +123,7 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1955737568274084}
   m_Enabled: 1
---- !u!114 &114204770513934398
+--- !u!114 &114027152116487430
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -131,7 +131,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1955737568274084}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8072d49069b01864eac689dde9d4c2d3, type: 3}
+  m_Script: {fileID: 11500000, guid: 16585d3e05ebd974385c8a2e3b9385cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tank: {fileID: 0}
@@ -139,7 +139,7 @@ MonoBehaviour:
   distance: 7
   yMinLimit: -25
   yMaxLimit: 20
-  xMinLimit: -20
+  xMinLimit: -25
   xMaxLimit: 20
 --- !u!124 &124342223864222344
 Behaviour:
