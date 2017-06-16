@@ -42,7 +42,7 @@ public class JoystickOrbitBehaviour : MonoBehaviour
             if (!zoomed)
             {
                 zoomed = true;
-                distance = -14f;
+                distance = -10f;
             }
             else
             {

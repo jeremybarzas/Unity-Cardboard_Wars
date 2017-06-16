@@ -2520,7 +2520,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1778931562284748}
   serializedVersion: 2
-  m_Mass: 3
+  m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -2780,7 +2780,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TankShell: {fileID: 1526931482927050, guid: f3b3f71723ac05e4a84f805f0e6bea2a, type: 2}
   ShellSpawn: {fileID: 4226634634771508}
-  fireRate: 0.25
+  fireRate: 0.75
   ShootingAudioSource: {fileID: 82513664931723358}
   shot1: {fileID: 8300000, guid: 6c1a0f187cba7a7409f0046a4be6f77f, type: 3}
   shot2: {fileID: 8300000, guid: 2d3ee6d14ebe1844da662de6eaae9153, type: 3}
