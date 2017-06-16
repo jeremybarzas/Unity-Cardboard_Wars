@@ -7,7 +7,12 @@ public class TankBehaviour : MonoBehaviour
 
     public Tank tank_Attrib;
     public Animator tankDeathAnimator;
-    
+
+    private void Start()
+    {
+        hp = tank_Attrib.Health;
+    }
+
     public void OnTriggerEnter(Collider other)
     {
         var projectile = other.gameObject.GetComponent<ProjectileBehaviour>();
