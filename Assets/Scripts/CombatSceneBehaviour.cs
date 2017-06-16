@@ -68,7 +68,7 @@ public class CombatSceneBehaviour : MonoBehaviour
     {
         if (!paused)
         {
-            if (Input.GetKeyDown(KeyCode.Escape) || Input.GetButtonDown("Submit"))
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
                 paused = true;
                 pauseMenu.enabled = true;
